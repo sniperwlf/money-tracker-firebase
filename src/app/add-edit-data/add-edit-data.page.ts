@@ -23,12 +23,12 @@ export class AddEditDataPage implements OnInit {
     private firebaseService: FirebaseService
   ) {
       this.route.params.subscribe((data: any) => {
-        console.log(data.type);
+        //console.log(data.type);
         this.id = data.type;
         // eslint-disable-next-line eqeqeq
         if(data.type == 'add'){
           this.isEdit = false;
-        }else{
+        }  else {
             this.isEdit = true;
             // eslint-disable-next-line @typescript-eslint/no-shadow
             this.firebaseService.get_single_transaction(data.type).subscribe((data: any) => {
@@ -59,9 +59,9 @@ export class AddEditDataPage implements OnInit {
       }
       this.firebaseService.add_transaction(data).then((res: any) => {
           console.log(res);
-      this.loading = false;
+          this.loading = false;
       // eslint-disable-next-line @typescript-eslint/semi
-      this.router.navigateByUrl('/home')
+          this.router.navigateByUrl('/home')
       // eslint-disable-next-line @typescript-eslint/semi
       })
   }

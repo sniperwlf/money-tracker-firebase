@@ -1,7 +1,7 @@
 <ion-content>
     <ion-icon name="arrow-back-outline" class="ion-padding" routerLink="/home"></ion-icon>
     <div class="main-section">
-        <h3 class="ion-padding">{{isEdit  ?  'Agregar  transaccion'  :   'Editar Transaccion'}}</h3>
+        <h3 class="ion-padding">{{isEdit  ?  'Editar  transaccion'  :   'Agregar Transaccion'}}</h3>
         <div class="form ion-padding ion-margin">
 
             <ion-select interface ="action-sheet" [(ngModel)]="type" placeholder="Seleccionar tipo">
@@ -13,7 +13,7 @@
             <ion-input placeholder="Sub title" [(ngModel)]="subTitle"></ion-input>
             <ion-input placeholder="Amount" [(ngModel)]="amount"></ion-input>
 
-            <ion-button color="dark" (click)="addTransaction()">{{isEdit  ?  'Agregar'  :  'Editar'}} &nbsp;<ion-spinner *ngIf="loading" ></ion-spinner></ion-button>
+            <ion-button color="dark" (click)="addTransaction()">{{isEdit  ?  'Editar'  :  'Agregar'}} &nbsp;<ion-spinner *ngIf="loading" ></ion-spinner></ion-button>
         </div>
 
     </div>
